@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Data Science Fundamentals",
+      "ar": "أساسيات علوم البيانات"
+    },
+    "description": {
+      "en": "Learn Python, statistics, machine learning, and data visualization",
+      "ar": "تعلم Python والإحصاء والتعلم الآلي وتصور البيانات"
+    },
+    "price": 500000,
+    "duration": {
+      "en": "8 weeks",
+      "ar": "8 أسابيع"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "active": false,
+    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "icon": "BarChart3"
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Data Analysis with Excel & Power BI",
+      "ar": "تحليل البيانات باستخدام Excel و Power BI"
+    },
+    "description": {
+      "en": "Master data analysis using Excel and Power BI for business insights",
+      "ar": "إتقان تحليل البيانات باستخدام Excel و Power BI للحصول على رؤى الأعمال"
+    },
+    "price": 350000,
+    "duration": {
+      "en": "6 weeks",
+      "ar": "6 أسابيع"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "active": true,
+    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "icon": "TrendingUp"
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Data Engineering with SQL & Python",
+      "ar": "هندسة البيانات باستخدام SQL و Python"
+    },
+    "description": {
+      "en": "Build data pipelines, ETL processes, and database management",
+      "ar": "بناء خطوط أنابيب البيانات وعمليات ETL وإدارة قواعد البيانات"
+    },
+    "price": 600000,
+    "duration": {
+      "en": "10 weeks",
+      "ar": "10 أسابيع"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "active": true,
+    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "icon": "Database"
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Cloud Engineering (AWS/Azure)",
+      "ar": "الهندسة السحابية (AWS/Azure)"
+    },
+    "description": {
+      "en": "Deploy and manage cloud infrastructure for data applications",
+      "ar": "نشر وإدارة البنية التحتية السحابية لتطبيقات البيانات"
+    },
+    "price": 750000,
+    "duration": {
+      "en": "12 weeks",
+      "ar": "12 أسبوع"
+    },
+    "level": {
+      "en": "Advanced",
+      "ar": "متقدم"
+    },
+    "active": true,
+    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "icon": "Cloud"
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "DevOps for Data Teams",
+      "ar": "DevOps لفرق البيانات"
+    },
+    "description": {
+      "en": "CI/CD, containerization, and automation for data workflows",
+      "ar": "CI/CD والحاويات والأتمتة لسير عمل البيانات"
+    },
+    "price": 650000,
+    "duration": {
+      "en": "8 weeks",
+      "ar": "8 أسابيع"
+    },
+    "level": {
+      "en": "Advanced",
+      "ar": "متقدم"
+    },
+    "active": false,
+    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "icon": "Settings"
+  }
+]

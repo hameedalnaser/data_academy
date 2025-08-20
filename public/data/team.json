@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Hameed Mahmood Salih",
+    "title": {
+      "en": "Lead Data Scientist & Founder",
+      "ar": "كبير علماء البيانات والمؤسس"
+    },
+    "bio": {
+      "en": "Expert in machine learning and data engineering with 8+ years of experience in building data-driven solutions for enterprises.",
+      "ar": "خبير في التعلم الآلي وهندسة البيانات مع أكثر من 8 سنوات من الخبرة في بناء حلول مدفوعة بالبيانات للمؤسسات."
+    },
+    "linkedin": "https://linkedin.com/in/hameed-mahmood",
+    "image": "/pics/icon.png"
+  },
+  {
+    "name": "Yahya Mohamed",
+    "title": {
+      "en": "Senior Data Engineer & Co-Founder",
+      "ar": "كبير مهندسي البيانات والشريك المؤسس"
+    },
+    "bio": {
+      "en": "Specialized in cloud architecture and big data technologies with extensive experience in AWS and Azure platforms.",
+      "ar": "متخصص في الهندسة المعمارية السحابية وتقنيات البيانات الضخمة مع خبرة واسعة في منصات AWS و Azure."
+    },
+    "linkedin": "https://linkedin.com/in/yahya-mohamed",
+    "image": "/pics/icon.png"
+  }
+]

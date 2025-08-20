@@ -1,0 +1,78 @@
+{
+  "metrics": [
+    {
+      "id": "participants",
+      "value": 1250,
+      "label": {
+        "en": "Participants",
+        "ar": "المشاركين"
+      },
+      "icon": "Users",
+      "description": {
+        "en": "Professionals trained across all programs",
+        "ar": "متخصصين تم تدريبهم عبر جميع البرامج"
+      }
+    },
+    {
+      "id": "courses",
+      "value": 15,
+      "label": {
+        "en": "Courses",
+        "ar": "الدورات"
+      },
+      "icon": "BookOpen",
+      "description": {
+        "en": "Comprehensive training programs offered",
+        "ar": "برامج تدريبية شاملة مقدمة"
+      }
+    },
+    {
+      "id": "trainingHours",
+      "value": 2400,
+      "label": {
+        "en": "Training Hours",
+        "ar": "ساعات التدريب"
+      },
+      "icon": "Clock",
+      "description": {
+        "en": "Total hours of professional development delivered",
+        "ar": "إجمالي ساعات التطوير المهني المقدمة"
+      }
+    },
+    {
+      "id": "companies",
+      "value": 85,
+      "label": {
+        "en": "Partner Companies",
+        "ar": "الشركات الشريكة"
+      },
+      "icon": "Building",
+      "description": {
+        "en": "Organizations that have partnered with us for training",
+        "ar": "المنظمات التي تشاركت معنا في التدريب"
+      }
+    }
+  ],
+  "highlights": [
+    {
+      "title": {
+        "en": "Industry Recognition",
+        "ar": "اعتراف الصناعة"
+      },
+      "description": {
+        "en": "Recognized as a leading data education provider in the Middle East",
+        "ar": "معترف بها كمزود رائد لتعليم البيانات في الشرق الأوسط"
+      }
+    },
+    {
+      "title": {
+        "en": "Career Advancement",
+        "ar": "التقدم المهني"
+      },
+      "description": {
+        "en": "75% of graduates received promotions or new job offers within 6 months",
+        "ar": "75% من الخريجين حصلوا على ترقيات أو عروض عمل جديدة خلال 6 أشهر"
+      }
+    }
+  ]
+}

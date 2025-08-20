@@ -1,0 +1,138 @@
+[
+  {
+    "id": "live-training",
+    "title": {
+      "en": "Live Online Training",
+      "ar": "التدريب المباشر عبر الإنترنت"
+    },
+    "description": {
+      "en": "Interactive sessions with expert instructors covering cutting-edge data technologies and methodologies",
+      "ar": "جلسات تفاعلية مع مدربين خبراء تغطي أحدث تقنيات ومنهجيات البيانات"
+    },
+    "icon": "Users",
+    "features": [
+      {
+        "en": "Live interactive sessions",
+        "ar": "جلسات تفاعلية مباشرة"
+      },
+      {
+        "en": "Expert instructors",
+        "ar": "مدربين خبراء"
+      },
+      {
+        "en": "Real-world projects",
+        "ar": "مشاريع من الواقع"
+      },
+      {
+        "en": "Certificate upon completion",
+        "ar": "شهادة عند الإنجاز"
+      }
+    ],
+    "duration": {
+      "en": "4-12 weeks",
+      "ar": "4-12 أسبوع"
+    }
+  },
+  {
+    "id": "mentoring",
+    "title": {
+      "en": "Personal Mentoring",
+      "ar": "الإرشاد الشخصي"
+    },
+    "description": {
+      "en": "One-on-one guidance for career development and skill advancement in data fields",
+      "ar": "توجيه فردي لتطوير المهنة وتقدم المهارات في مجالات البيانات"
+    },
+    "icon": "Award",
+    "features": [
+      {
+        "en": "Personalized learning path",
+        "ar": "مسار تعلم شخصي"
+      },
+      {
+        "en": "Career guidance",
+        "ar": "إرشاد مهني"
+      },
+      {
+        "en": "Industry insights",
+        "ar": "رؤى الصناعة"
+      },
+      {
+        "en": "Portfolio development",
+        "ar": "تطوير المحفظة"
+      }
+    ],
+    "duration": {
+      "en": "3-6 months",
+      "ar": "3-6 أشهر"
+    }
+  },
+  {
+    "id": "consultancy",
+    "title": {
+      "en": "Technical Consultancy",
+      "ar": "الاستشارات التقنية"
+    },
+    "description": {
+      "en": "Professional consulting services for organizations looking to implement data-driven solutions",
+      "ar": "خدمات استشارية مهنية للمنظمات التي تسعى لتنفيذ حلول مدفوعة بالبيانات"
+    },
+    "icon": "Code",
+    "features": [
+      {
+        "en": "Data strategy development",
+        "ar": "تطوير استراتيجية البيانات"
+      },
+      {
+        "en": "Technology implementation",
+        "ar": "تنفيذ التكنولوجيا"
+      },
+      {
+        "en": "Team training",
+        "ar": "تدريب الفريق"
+      },
+      {
+        "en": "Ongoing support",
+        "ar": "دعم مستمر"
+      }
+    ],
+    "duration": {
+      "en": "Project-based",
+      "ar": "على أساس المشروع"
+    }
+  },
+  {
+    "id": "corporate-training",
+    "title": {
+      "en": "Corporate Training",
+      "ar": "التدريب المؤسسي"
+    },
+    "description": {
+      "en": "Customized training programs designed for organizations to upskill their teams",
+      "ar": "برامج تدريبية مخصصة مصممة للمنظمات لرفع مهارات فرقها"
+    },
+    "icon": "Building",
+    "features": [
+      {
+        "en": "Customized curriculum",
+        "ar": "منهج مخصص"
+      },
+      {
+        "en": "On-site or remote delivery",
+        "ar": "تسليم في الموقع أو عن بُعد"
+      },
+      {
+        "en": "Group certifications",
+        "ar": "شهادات جماعية"
+      },
+      {
+        "en": "Progress tracking",
+        "ar": "تتبع التقدم"
+      }
+    ],
+    "duration": {
+      "en": "Flexible",
+      "ar": "مرن"
+    }
+  }
+]

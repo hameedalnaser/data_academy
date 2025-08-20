@@ -1,0 +1,206 @@
+[
+  {
+    "id": 101,
+    "title": {
+      "en": "Introduction to Data Analytics",
+      "ar": "مقدمة في تحليل البيانات"
+    },
+    "description": {
+      "en": "Fundamentals of data analysis using Excel and basic statistical methods",
+      "ar": "أساسيات تحليل البيانات باستخدام Excel والطرق الإحصائية الأساسية"
+    },
+    "completedDate": "2023-12-15",
+    "participants": 45,
+    "duration": {
+      "en": "4 weeks",
+      "ar": "4 أسابيع"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "instructor": "Dr. Ahmed Hassan",
+    "rating": 4.8,
+    "icon": "BarChart3",
+    "outcomes": [
+      {
+        "en": "Basic data manipulation skills",
+        "ar": "مهارات معالجة البيانات الأساسية"
+      },
+      {
+        "en": "Statistical analysis fundamentals",
+        "ar": "أساسيات التحليل الإحصائي"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": {
+      "en": "Python for Data Science Bootcamp",
+      "ar": "معسكر Python لعلوم البيانات"
+    },
+    "description": {
+      "en": "Intensive 8-week program covering Python programming for data analysis and machine learning",
+      "ar": "برنامج مكثف لمدة 8 أسابيع يغطي برمجة Python لتحليل البيانات والتعلم الآلي"
+    },
+    "completedDate": "2024-01-20",
+    "participants": 38,
+    "duration": {
+      "en": "8 weeks",
+      "ar": "8 أسابيع"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Eng. Sarah Al-Rashid",
+    "rating": 4.9,
+    "icon": "Code",
+    "outcomes": [
+      {
+        "en": "Proficiency in Python for data analysis",
+        "ar": "إتقان Python لتحليل البيانات"
+      },
+      {
+        "en": "Machine learning implementation",
+        "ar": "تنفيذ التعلم الآلي"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": {
+      "en": "Business Intelligence with Power BI",
+      "ar": "ذكاء الأعمال باستخدام Power BI"
+    },
+    "description": {
+      "en": "Creating interactive dashboards and reports for business decision making",
+      "ar": "إنشاء لوحات معلومات وتقارير تفاعلية لاتخاذ قرارات الأعمال"
+    },
+    "completedDate": "2024-02-28",
+    "participants": 52,
+    "duration": {
+      "en": "6 weeks",
+      "ar": "6 أسابيع"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Mr. Omar Khalil",
+    "rating": 4.7,
+    "icon": "TrendingUp",
+    "outcomes": [
+      {
+        "en": "Advanced Power BI skills",
+        "ar": "مهارات Power BI متقدمة"
+      },
+      {
+        "en": "Dashboard design principles",
+        "ar": "مبادئ تصميم لوحة المعلومات"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "title": {
+      "en": "SQL Database Management",
+      "ar": "إدارة قواعد البيانات SQL"
+    },
+    "description": {
+      "en": "Comprehensive course on SQL querying, database design, and data management",
+      "ar": "دورة شاملة حول استعلامات SQL وتصميم قواعد البيانات وإدارة البيانات"
+    },
+    "completedDate": "2024-03-15",
+    "participants": 41,
+    "duration": {
+      "en": "5 weeks",
+      "ar": "5 أسابيع"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "instructor": "Dr. Fatima Al-Zahra",
+    "rating": 4.6,
+    "icon": "Database",
+    "outcomes": [
+      {
+        "en": "SQL querying proficiency",
+        "ar": "إتقان استعلامات SQL"
+      },
+      {
+        "en": "Database optimization techniques",
+        "ar": "تقنيات تحسين قواعد البيانات"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "title": {
+      "en": "Machine Learning Fundamentals",
+      "ar": "أساسيات التعلم الآلي"
+    },
+    "description": {
+      "en": "Introduction to machine learning algorithms and their practical applications",
+      "ar": "مقدمة لخوارزميات التعلم الآلي وتطبيقاتها العملية"
+    },
+    "completedDate": "2024-04-10",
+    "participants": 33,
+    "duration": {
+      "en": "10 weeks",
+      "ar": "10 أسابيع"
+    },
+    "level": {
+      "en": "Advanced",
+      "ar": "متقدم"
+    },
+    "instructor": "Prof. Ali Mansour",
+    "rating": 4.8,
+    "icon": "Settings",
+    "outcomes": [
+      {
+        "en": "ML algorithm implementation",
+        "ar": "تنفيذ خوارزميات التعلم الآلي"
+      },
+      {
+        "en": "Model evaluation and tuning",
+        "ar": "تقييم النماذج وضبطها"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": {
+      "en": "Data Visualization Masterclass",
+      "ar": "فئة رئيسية في تصور البيانات"
+    },
+    "description": {
+      "en": "Advanced techniques for creating compelling data visualizations and storytelling",
+      "ar": "تقنيات متقدمة لإنشاء تصورات بيانات مقنعة وسرد القصص"
+    },
+    "completedDate": "2024-05-25",
+    "participants": 29,
+    "duration": {
+      "en": "4 weeks",
+      "ar": "4 أسابيع"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Ms. Nour Al-Din",
+    "rating": 4.9,
+    "icon": "BarChart3",
+    "outcomes": [
+      {
+        "en": "Advanced visualization techniques",
+        "ar": "تقنيات التصور المتقدمة"
+      },
+      {
+        "en": "Data storytelling skills",
+        "ar": "مهارات سرد البيانات"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "academy": {
+    "name": {
+      "en": "Data Academy",
+      "ar": "أكاديمية البيانات"
+    },
+    "email": "info@iq-data.org",
+    "defaultRegistrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8"
+  },
+  "statistics": {
+    "participants": 1250,
+    "courses": 15,
+    "trainingHours": 2400,
+    "successRate": 95
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/data-academy-iraq",
+    "facebook": "",
+    "twitter": ""
+  }
+}
