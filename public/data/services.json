@@ -1,9 +1,9 @@
 [
   {
-    "id": "live-training",
+    "id": "Training",
     "title": {
-      "en": "Live Online Training",
-      "ar": "التدريب المباشر عبر الإنترنت"
+      "en": "Training",
+      "ar": "التدريب"
     },
     "description": {
       "en": "Interactive sessions with expert instructors covering cutting-edge data technologies and methodologies",
