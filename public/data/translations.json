@@ -6,7 +6,7 @@
     "contact": "Contact",
     "heroTitle": "Data Academy",
     "heroSubtitle": "Delivering Modern Data Specializations",
-    "heroDescription": "Professional training, mentoring and consultancy in data science, data analysis, data engineering, cloud engineering, and DevOps engineering for Iraqi and Middle Eastern professionals.",
+    "heroDescription": "Professional training, mentoring and consultancy in data science, data analysis, data engineering, cloud engineering, and DevOps engineering.",
     "registerTraining": "Register for Training",
     "contactMentoring": "Contact for Mentoring",
     "coursesTitle": "Available Courses",
@@ -51,7 +51,12 @@
     "viewAllArchived": "View All Archived Courses",
     "completedOn": "Completed on",
     "participantsCount": "participants",
-    "rating": "Rating"
+    "rating": "Rating",
+    "partnersTitle": "Our Partners",
+    "partnersSubtitle": "Trusted partners supporting our mission",
+    "services": "Services",
+    "partners": "Partners",
+    "openingEmailClient": "Opening your email client..."
   },
   "ar": {
     "home": "الرئيسية",
@@ -60,7 +65,7 @@
     "contact": "اتصل بنا",
     "heroTitle": "أكاديمية البيانات",
     "heroSubtitle": "تقديم تخصصات البيانات الحديثة",
-    "heroDescription": "تدريب مهني، إرشاد واستشارات في علوم البيانات، تحليل البيانات، هندسة البيانات، الهندسة السحابية، وهندسة DevOps للمهنيين العراقيين وفي الشرق الأوسط.",
+    "heroDescription": "تدريب مهني، إرشاد واستشارات في علوم البيانات، تحليل البيانات، هندسة البيانات، الهندسة السحابية، وهندسة DevOps.",
     "registerTraining": "التسجيل في التدريب",
     "contactMentoring": "اتصل للإرشاد",
     "coursesTitle": "الدورات المتاحة",
@@ -105,6 +110,11 @@
     "viewAllArchived": "عرض جميع الدورات المؤرشفة",
     "completedOn": "اكتملت في",
     "participantsCount": "مشارك",
-    "rating": "التقييم"
+    "rating": "التقييم",
+    "partnersTitle": "شركاؤنا",
+    "partnersSubtitle": "شركاء موثوقون يدعمون مهمتنا",
+    "services": "الخدمات",
+    "partners": "الشركاء",
+    "openingEmailClient": "فتح برنامج البريد الإلكتروني..."
   }
 }

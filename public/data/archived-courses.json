@@ -1,205 +1,351 @@
 [
   {
-    "id": 101,
+    "id": 201,
     "title": {
-      "en": "Introduction to Data ANALYSIS",
-      "ar": "مقدمة في تحليل البيانات"
+      "en": "Database Design and Development",
+      "ar": "تصميم وتطوير قواعد البيانات"
     },
     "description": {
-      "en": "Fundamentals of data analysis using Excel and basic statistical methods",
-      "ar": "أساسيات تحليل البيانات باستخدام Excel والطرق الإحصائية الأساسية"
+      "en": "Comprehensive training on relational database design, SQL, and best practices.",
+      "ar": "تدريب شامل حول تصميم قواعد البيانات العلائقية و SQL وأفضل الممارسات."
     },
-    "completedDate": "2023-12-15",
-    "participants": 45,
+    "completedDate": "2022-03-12",
+    "participants": 15,
     "duration": {
-      "en": "4 weeks",
-      "ar": "4 أسابيع"
-    },
-    "level": {
-      "en": "Beginner",
-      "ar": "مبتدئ"
-    },
-    "instructor": "Dr. Ahmed Hassan",
-    "rating": 4.8,
-    "icon": "BarChart3",
-    "outcomes": [
-      {
-        "en": "Basic data manipulation skills",
-        "ar": "مهارات معالجة البيانات الأساسية"
-      },
-      {
-        "en": "Statistical analysis fundamentals",
-        "ar": "أساسيات التحليل الإحصائي"
-      }
-    ]
-  },
-  {
-    "id": 102,
-    "title": {
-      "en": "Python for Data Science Bootcamp",
-      "ar": "معسكر Python لعلوم البيانات"
-    },
-    "description": {
-      "en": "Intensive 8-week program covering Python programming for data analysis and machine learning",
-      "ar": "برنامج مكثف لمدة 8 أسابيع يغطي برمجة Python لتحليل البيانات والتعلم الآلي"
-    },
-    "completedDate": "2024-01-20",
-    "participants": 38,
-    "duration": {
-      "en": "8 weeks",
-      "ar": "8 أسابيع"
+      "en": "5 days – 4 hours/day",
+      "ar": "5 أيام – 4 ساعات/يوم"
     },
     "level": {
       "en": "Intermediate",
       "ar": "متوسط"
     },
-    "instructor": "Eng. Sarah Al-Rashid",
-    "rating": 4.9,
-    "icon": "Code",
-    "outcomes": [
-      {
-        "en": "Proficiency in Python for data analysis",
-        "ar": "إتقان Python لتحليل البيانات"
-      },
-      {
-        "en": "Machine learning implementation",
-        "ar": "تنفيذ التعلم الآلي"
-      }
-    ]
-  },
-  {
-    "id": 103,
-    "title": {
-      "en": "Business Intelligence with Power BI",
-      "ar": "ذكاء الأعمال باستخدام Power BI"
-    },
-    "description": {
-      "en": "Creating interactive dashboards and reports for business decision making",
-      "ar": "إنشاء لوحات معلومات وتقارير تفاعلية لاتخاذ قرارات الأعمال"
-    },
-    "completedDate": "2024-02-28",
-    "participants": 52,
-    "duration": {
-      "en": "6 weeks",
-      "ar": "6 أسابيع"
-    },
-    "level": {
-      "en": "Intermediate",
-      "ar": "متوسط"
-    },
-    "instructor": "Mr. Omar Khalil",
+    "instructor": "Hameed Mahmood Salih",
     "rating": 4.7,
-    "icon": "TrendingUp",
+    "icon": "Database",
+    "image": "/pics/tr4.jpg",
     "outcomes": [
       {
-        "en": "Advanced Power BI skills",
-        "ar": "مهارات Power BI متقدمة"
+        "en": "Understand relational database concepts",
+        "ar": "فهم مفاهيم قواعد البيانات العلائقية"
       },
       {
-        "en": "Dashboard design principles",
-        "ar": "مبادئ تصميم لوحة المعلومات"
+        "en": "Ability to design and implement SQL databases",
+        "ar": "القدرة على تصميم وتنفيذ قواعد بيانات SQL"
       }
     ]
   },
   {
-    "id": 104,
+    "id": 202,
     "title": {
-      "en": "SQL Database Management",
-      "ar": "إدارة قواعد البيانات SQL"
+      "en": "Machine Learning Training",
+      "ar": "تدريب في التعلم الآلي"
     },
     "description": {
-      "en": "Comprehensive course on SQL querying, database design, and data management",
-      "ar": "دورة شاملة حول استعلامات SQL وتصميم قواعد البيانات وإدارة البيانات"
+      "en": "Hands-on introduction to supervised and unsupervised machine learning.",
+      "ar": "مقدمة عملية في التعلم الآلي الموجه وغير الموجه."
     },
-    "completedDate": "2024-03-15",
-    "participants": 41,
+    "completedDate": "2023-07-20",
+    "participants": 15,
     "duration": {
-      "en": "5 weeks",
-      "ar": "5 أسابيع"
+      "en": "5 days – 4 hours/day",
+      "ar": "5 أيام – 4 ساعات/يوم"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.8,
+    "icon": "Cpu",
+    "image": "/pics/tr5.jpg",
+    "outcomes": [
+      {
+        "en": "Build machine learning models",
+        "ar": "بناء نماذج التعلم الآلي"
+      },
+      {
+        "en": "Apply supervised and unsupervised algorithms",
+        "ar": "تطبيق خوارزميات موجهة وغير موجهة"
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "title": {
+      "en": "Data Analysis and Visualization",
+      "ar": "تحليل البيانات وتصويرها"
+    },
+    "description": {
+      "en": "Training on exploring datasets, visualization tools, and storytelling with data.",
+      "ar": "تدريب على استكشاف مجموعات البيانات وأدوات التصوير وسرد القصص بالبيانات."
+    },
+    "completedDate": "2024-01-10",
+    "participants": 25,
+    "duration": {
+      "en": "5 days – 4 hours/day",
+      "ar": "5 أيام – 4 ساعات/يوم"
     },
     "level": {
       "en": "Beginner",
       "ar": "مبتدئ"
     },
-    "instructor": "Dr. Fatima Al-Zahra",
+    "instructor": "Hameed Mahmood Salih",
     "rating": 4.6,
-    "icon": "Database",
+    "icon": "BarChart3",
+    "image": "/pics/tr6.jpg",
     "outcomes": [
       {
-        "en": "SQL querying proficiency",
-        "ar": "إتقان استعلامات SQL"
+        "en": "Use visualization tools effectively",
+        "ar": "استخدام أدوات التصوير بفعالية"
       },
       {
-        "en": "Database optimization techniques",
-        "ar": "تقنيات تحسين قواعد البيانات"
+        "en": "Communicate insights with data",
+        "ar": "إيصال الرؤى باستخدام البيانات"
       }
     ]
   },
   {
-    "id": 105,
+    "id": 204,
     "title": {
-      "en": "Machine Learning Fundamentals",
-      "ar": "أساسيات التعلم الآلي"
+      "en": "Excel Basic Training",
+      "ar": "تدريب أساسيات Excel"
     },
     "description": {
-      "en": "Introduction to machine learning algorithms and their practical applications",
-      "ar": "مقدمة لخوارزميات التعلم الآلي وتطبيقاتها العملية"
+      "en": "Introduction to Microsoft Excel for beginners covering formulas, tables, and charts.",
+      "ar": "مقدمة في Microsoft Excel للمبتدئين تغطي الصيغ والجداول والمخططات."
     },
-    "completedDate": "2024-04-10",
-    "participants": 33,
+    "completedDate": "2022-08-15",
+    "participants": 20,
     "duration": {
-      "en": "10 weeks",
-      "ar": "10 أسابيع"
+      "en": "5 days – 3 hours/day",
+      "ar": "5 أيام – 3 ساعات/يوم"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.5,
+    "icon": "Table",
+    "image": "/pics/tr1.jpg",
+    "outcomes": [
+      {
+        "en": "Create and manage spreadsheets",
+        "ar": "إنشاء وإدارة جداول البيانات"
+      },
+      {
+        "en": "Use formulas and basic charts",
+        "ar": "استخدام الصيغ والمخططات الأساسية"
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "title": {
+      "en": "Survey123 and Field Data Collection",
+      "ar": "Survey123 وجمع البيانات الميدانية"
+    },
+    "description": {
+      "en": "Training on ArcGIS Survey123 for efficient field data collection.",
+      "ar": "تدريب على ArcGIS Survey123 لجمع البيانات الميدانية بكفاءة."
+    },
+    "completedDate": "2023-05-03",
+    "participants": 50,
+    "duration": {
+      "en": "5 days – 2 hours/day",
+      "ar": "5 أيام – ساعتان/يوم"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.7,
+    "icon": "Map",
+    "image": "/pics/tr2.jpg",
+    "outcomes": [
+      {
+        "en": "Design digital survey forms",
+        "ar": "تصميم نماذج استبيانات رقمية"
+      },
+      {
+        "en": "Collect and analyze field data",
+        "ar": "جمع وتحليل البيانات الميدانية"
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "title": {
+      "en": "Data Analysis and Visualization using Power BI",
+      "ar": "تحليل البيانات وتصويرها باستخدام Power BI"
+    },
+    "description": {
+      "en": "Practical workshop on building dashboards and interactive reports with Power BI.",
+      "ar": "ورشة عملية حول إنشاء لوحات معلومات وتقارير تفاعلية باستخدام Power BI."
+    },
+    "completedDate": "2022-11-18",
+    "participants": 30,
+    "duration": {
+      "en": "5 days – 5 hours/day",
+      "ar": "5 أيام – 5 ساعات/يوم"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.8,
+    "icon": "PieChart",
+    "image": "/pics/tr3.jpg",
+    "outcomes": [
+      {
+        "en": "Build dashboards in Power BI",
+        "ar": "إنشاء لوحات معلومات في Power BI"
+      },
+      {
+        "en": "Connect multiple data sources",
+        "ar": "ربط مصادر بيانات متعددة"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "title": {
+      "en": "Advanced Excel",
+      "ar": "Excel متقدم"
+    },
+    "description": {
+      "en": "Master advanced Excel features including pivot tables, macros, and automation.",
+      "ar": "إتقان ميزات Excel المتقدمة بما في ذلك Pivot Tables والماكرو والأتمتة."
+    },
+    "completedDate": "2024-02-08",
+    "participants": 90,
+    "duration": {
+      "en": "5 days – 5 hours/day",
+      "ar": "5 أيام – 5 ساعات/يوم"
     },
     "level": {
       "en": "Advanced",
       "ar": "متقدم"
     },
-    "instructor": "Prof. Ali Mansour",
-    "rating": 4.8,
-    "icon": "Settings",
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.9,
+    "icon": "Grid",
+    "image": "/pics/tr9.jpg",
     "outcomes": [
       {
-        "en": "ML algorithm implementation",
-        "ar": "تنفيذ خوارزميات التعلم الآلي"
+        "en": "Use advanced Excel functions",
+        "ar": "استخدام دوال Excel المتقدمة"
       },
       {
-        "en": "Model evaluation and tuning",
-        "ar": "تقييم النماذج وضبطها"
+        "en": "Automate tasks with macros",
+        "ar": "أتمتة المهام باستخدام الماكرو"
       }
     ]
   },
   {
-    "id": 106,
+    "id": 208,
     "title": {
-      "en": "Data Visualization Masterclass",
-      "ar": "فئة رئيسية في تصور البيانات"
+      "en": "AWS re/Start Bootcamp",
+      "ar": "معسكر AWS re/Start"
     },
     "description": {
-      "en": "Advanced techniques for creating compelling data visualizations and storytelling",
-      "ar": "تقنيات متقدمة لإنشاء تصورات بيانات مقنعة وسرد القصص"
+      "en": "Full-time immersive training program on AWS cloud computing fundamentals.",
+      "ar": "برنامج تدريبي مكثف بدوام كامل حول أساسيات الحوسبة السحابية في AWS."
     },
-    "completedDate": "2024-05-25",
-    "participants": 29,
+    "completedDate": "2023-09-25",
+    "participants": 20,
     "duration": {
-      "en": "4 weeks",
-      "ar": "4 أسابيع"
+      "en": "3 months – full time",
+      "ar": "3 أشهر – دوام كامل"
+    },
+    "level": {
+      "en": "Beginner to Intermediate",
+      "ar": "مبتدئ إلى متوسط"
+    },
+    "instructor": "Yahya Mohaned",
+    "rating": 4.9,
+    "icon": "Cloud",
+    "image": "/pics/traws.jpg",
+    "outcomes": [
+      {
+        "en": "Deploy applications on AWS",
+        "ar": "نشر التطبيقات على AWS"
+      },
+      {
+        "en": "Gain AWS Cloud Practitioner-level skills",
+        "ar": "اكتساب مهارات مستوى ممارس السحابة من AWS"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "title": {
+      "en": "Data Analysis and BI with Metabase",
+      "ar": "تحليل البيانات وذكاء الأعمال باستخدام Metabase"
+    },
+    "description": {
+      "en": "Workshop on analyzing datasets and building BI dashboards using Metabase.",
+      "ar": "ورشة عمل لتحليل مجموعات البيانات وبناء لوحات ذكاء الأعمال باستخدام Metabase."
+    },
+    "completedDate": "2022-06-22",
+    "participants": 25,
+    "duration": {
+      "en": "5 days – 4 hours/day",
+      "ar": "5 أيام – 4 ساعات/يوم"
     },
     "level": {
       "en": "Intermediate",
       "ar": "متوسط"
     },
-    "instructor": "Ms. Nour Al-Din",
-    "rating": 4.9,
-    "icon": "BarChart3",
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.6,
+    "icon": "TrendingUp",
+    "image": "/pics/tr8.jpg",
     "outcomes": [
       {
-        "en": "Advanced visualization techniques",
-        "ar": "تقنيات التصور المتقدمة"
+        "en": "Build BI dashboards with Metabase",
+        "ar": "بناء لوحات ذكاء الأعمال باستخدام Metabase"
       },
       {
-        "en": "Data storytelling skills",
-        "ar": "مهارات سرد البيانات"
+        "en": "Explore and query data effectively",
+        "ar": "استكشاف البيانات واستعلامها بفعالية"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "title": {
+      "en": "Excel and Power BI for Data Analysis and Visualization",
+      "ar": "Excel و Power BI لتحليل البيانات وتصويرها"
+    },
+    "description": {
+      "en": "Combined training on using Excel and Power BI for business reporting and analytics.",
+      "ar": "تدريب مشترك على استخدام Excel و Power BI للتقارير والتحليلات التجارية."
+    },
+    "completedDate": "2024-04-02",
+    "participants": 20,
+    "duration": {
+      "en": "5 days – 3 hours/day",
+      "ar": "5 أيام – 3 ساعات/يوم"
+    },
+    "level": {
+      "en": "Intermediate",
+      "ar": "متوسط"
+    },
+    "instructor": "Hameed Mahmood Salih",
+    "rating": 4.7,
+    "icon": "Columns",
+    "image": "/pics/training.jpg",
+    "outcomes": [
+      {
+        "en": "Integrate Excel with Power BI",
+        "ar": "دمج Excel مع Power BI"
+      },
+      {
+        "en": "Create professional reports and dashboards",
+        "ar": "إنشاء تقارير ولوحات معلومات احترافية"
       }
     ]
   }

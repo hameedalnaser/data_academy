@@ -1,0 +1,155 @@
+{
+  "contactInfo": {
+    "email": "info@iq-data.org",
+    "phone": "+964 772 185 5554",
+    "website": "https://iq-data.org"
+  },
+  "socialMedia": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "username": "@data.academy.iq",
+      "url": "https://instagram.com/data.academy.iq",
+      "icon": "Instagram",
+      "color": "bg-gradient-to-r from-purple-500 to-pink-500",
+      "hoverColor": "hover:from-purple-600 hover:to-pink-600"
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "username": "@dataacademyiq",
+      "url": "https://t.me/dataacademyiq",
+      "icon": "Send",
+      "color": "bg-gradient-to-r from-blue-400 to-blue-600",
+      "hoverColor": "hover:from-blue-500 hover:to-blue-700"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "username": "Data Academy IQ",
+      "url": "https://facebook.com/dataacademyiq",
+      "icon": "Facebook",
+      "color": "bg-gradient-to-r from-blue-600 to-blue-800",
+      "hoverColor": "hover:from-blue-700 hover:to-blue-900"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "username": "Data Academy Iraq",
+      "url": "https://www.linkedin.com/company/data-academy-iq/",
+      "icon": "Linkedin",
+      "color": "bg-gradient-to-r from-blue-700 to-blue-900",
+      "hoverColor": "hover:from-blue-800 hover:to-blue-950"
+    }
+  ],
+  "contactSuggestions": [
+    {
+      "id": "training",
+      "title": {
+        "en": "Training Programs",
+        "ar": "البرامج التدريبية"
+      },
+      "description": {
+        "en": "Learn data science, analysis, and engineering",
+        "ar": "تعلم علوم البيانات والتحليل والهندسة"
+      },
+      "icon": "GraduationCap",
+      "color": "bg-blue-50 border-blue-200",
+      "iconColor": "text-blue-600",
+      "suggestion": {
+        "en": "Contact us for training enrollment and course details",
+        "ar": "اتصل بنا للتسجيل في التدريب وتفاصيل الدورات"
+      }
+    },
+    {
+      "id": "mentoring",
+      "title": {
+        "en": "Personal Mentoring",
+        "ar": "الإرشاد الشخصي"
+      },
+      "description": {
+        "en": "One-on-one career guidance and skill development",
+        "ar": "توجيه مهني فردي وتطوير المهارات"
+      },
+      "icon": "Users",
+      "color": "bg-green-50 border-green-200",
+      "iconColor": "text-green-600",
+      "suggestion": {
+        "en": "Reach out for personalized mentoring sessions",
+        "ar": "تواصل معنا لجلسات الإرشاد الشخصية"
+      }
+    },
+    {
+      "id": "consultancy",
+      "title": {
+        "en": "Technical Consultancy",
+        "ar": "الاستشارات التقنية"
+      },
+      "description": {
+        "en": "Professional consulting for organizations",
+        "ar": "استشارات مهنية للمؤسسات"
+      },
+      "icon": "Briefcase",
+      "color": "bg-purple-50 border-purple-200",
+      "iconColor": "text-purple-600",
+      "suggestion": {
+        "en": "Get in touch for enterprise consulting services",
+        "ar": "تواصل معنا لخدمات الاستشارات المؤسسية"
+      }
+    },
+    {
+      "id": "join-trainer",
+      "title": {
+        "en": "Join as Trainer",
+        "ar": "انضم كمدرب"
+      },
+      "description": {
+        "en": "Share your expertise with our community",
+        "ar": "شارك خبرتك مع مجتمعنا"
+      },
+      "icon": "UserPlus",
+      "color": "bg-orange-50 border-orange-200",
+      "iconColor": "text-orange-600",
+      "suggestion": {
+        "en": "Apply to become a trainer and share your knowledge",
+        "ar": "تقدم لتصبح مدرباً وشارك معرفتك"
+      }
+    },
+    {
+      "id": "partnership",
+      "title": {
+        "en": "Partnership",
+        "ar": "الشراكة"
+      },
+      "description": {
+        "en": "Collaborate with us for mutual growth",
+        "ar": "تعاون معنا للنمو المتبادل"
+      },
+      "icon": "Handshake",
+      "color": "bg-teal-50 border-teal-200",
+      "iconColor": "text-teal-600",
+      "suggestion": {
+        "en": "Explore partnership opportunities with us",
+        "ar": "استكشف فرص الشراكة معنا"
+      }
+    },
+    {
+      "id": "general",
+      "title": {
+        "en": "General Inquiry",
+        "ar": "استفسار عام"
+      },
+      "description": {
+        "en": "Any other questions or information",
+        "ar": "أي أسئلة أو معلومات أخرى"
+      },
+      "icon": "MessageCircle",
+      "color": "bg-gray-50 border-gray-200",
+      "iconColor": "text-gray-600",
+      "suggestion": {
+        "en": "Contact us for any other inquiries or information",
+        "ar": "اتصل بنا لأي استفسارات أو معلومات أخرى"
+      }
+    }
+  ]
+}

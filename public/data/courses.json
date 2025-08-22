@@ -2,25 +2,26 @@
   {
     "id": 1,
     "title": {
-      "en": "Data Science Fundamentals",
-      "ar": "أساسيات علوم البيانات"
+      "en": "coming soon",
+      "ar": "قريبا"
     },
     "description": {
-      "en": "Learn Python, statistics, machine learning, and data visualization",
-      "ar": "تعلم Python والإحصاء والتعلم الآلي وتصور البيانات"
+      "en": "Fill the form and tell us which course do you need, and how you want us to deliver it",
+      "ar": "املأ النموذج وأخبرنا أي دورة تحتاج، وكيف تود أن نقدمها لك."
     },
-    "price": 5000000,
+    "price": 0,
     "duration": {
-      "en": "9 weeks",
-      "ar": "9 أسابيع"
+      "en": "Click on button below",
+      "ar": "اضغط على الزر ادناه"
     },
     "level": {
-      "en": "Beginner",
-      "ar": "مبتدئ"
+      "en": "All",
+      "ar": "جميع المستويات"
     },
-    "active": false,
+    "active": true,
     "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "BarChart3"
+    "icon": "BarChart3",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center"
   },
   {
     "id": 2,
@@ -41,9 +42,10 @@
       "en": "Beginner",
       "ar": "مبتدئ"
     },
-    "active": true,
+    "active": false,
     "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "TrendingUp"
+    "icon": "TrendingUp",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center"
   },
   {
     "id": 3,
@@ -64,9 +66,10 @@
       "en": "Intermediate",
       "ar": "متوسط"
     },
-    "active": true,
+    "active": false,
     "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "Database"
+    "icon": "Database",
+    "image": "https://images.unsplash.com/photo-1518186233392-c232efbf2373?w=400&h=300&fit=crop&crop=center"
   },
   {
     "id": 4,
@@ -87,9 +90,10 @@
       "en": "Advanced",
       "ar": "متقدم"
     },
-    "active": true,
+    "active": false,
     "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "Cloud"
+    "icon": "Cloud",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center"
   },
   {
     "id": 5,
@@ -112,6 +116,7 @@
     },
     "active": false,
     "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "Settings"
+    "icon": "Settings",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop&crop=center"
   }
 ]

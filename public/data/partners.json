@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "AWS re/start",
+      "ar": "AWS re/start"
+    },
+    "icon": "/pics/aws.png",
+    "embedUrl": "https://aws.amazon.com/training/restart/",
+    "active": true
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Mosul Space",
+      "ar": "موصل سبيس"
+    },
+    "icon": "/pics/ms.png",
+    "embedUrl": "https://www.datacorp-analytics.com",
+    "active": true
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Iraqi Engineer Union",
+      "ar": "نقابة المهندسين العراقية"
+    },
+    "icon": "/pics/eng.jpeg",
+    "embedUrl": "https://www.cloudfirstsolutions.com",
+    "active": true
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Innovation Hub Iraq",
+      "ar": "مركز الابتكار العراق"
+    },
+    "icon": "https://img.icons8.com/color/96/000000/light-bulb.png",
+    "embedUrl": "https://www.innovationhub-iraq.org",
+    "active": false
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Digital Transformation Co.",
+      "ar": "شركة التحول الرقمي"
+    },
+    "icon": "https://img.icons8.com/color/96/000000/transformation.png",
+    "embedUrl": "https://www.digitaltransformation.co",
+    "active": false
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "Al-Mustaqbal University",
+      "ar": "جامعة المستقبل"
+    },
+    "icon": "https://img.icons8.com/color/96/000000/university.png",
+    "embedUrl": "https://www.mustaqbal-university.edu.iq",
+    "active": false
+  }
+]

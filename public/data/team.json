@@ -3,26 +3,26 @@
     "name": "Hameed Mahmood Salih",
     "title": {
       "en": "Senior Data Consaltant",
-      "ar": "كبير علماء البيانات والمؤسس"
+      "ar": "مستشار بيانات اقدم"
     },
     "bio": {
-      "en": "Expert in machine learning and data engineering with 8+ years of experience in building data-driven solutions for enterprises.",
-      "ar": "خبير في التعلم الآلي وهندسة البيانات مع أكثر من 8 سنوات من الخبرة في بناء حلول مدفوعة بالبيانات للمؤسسات."
-    },
+  "en": "Data professional with a Master's degree in Data Science and extensive experience as a Data Analyst, Data Engineer, and Data Scientist. AWS Certified Data Engineer – Associate, with strong expertise in designing and delivering data-driven solutions.",
+  "ar": "متخصص في البيانات حاصل على درجة الماجستير في علم البيانات ويتمتع بخبرة واسعة كـ محلل بيانات ومهندس بيانات وعالم بيانات. حاصل على شهادة مهندس بيانات معتمد من AWS – المستوى المساعد، مع خبرة قوية في تصميم وتقديم الحلول المدفوعة بالبيانات."
+},
     "linkedin": "https://www.linkedin.com/in/h-m-reseng/",
-    "image": "/pics/icon.png"
+    "image": "/pics/hameed.jpg"
   },
   {
     "name": "Yahya Mohamed",
     "title": {
       "en": "Senior Cloud & DevOps Engineer",
-      "ar": "كبير مهندسي البيانات والشريك المؤسس"
+      "ar": "مهندس سحابي وعمليات اقدم"
     },
     "bio": {
-      "en": "Specialized in cloud architecture and big data technologies with extensive experience in AWS and Azure platforms.",
-      "ar": "متخصص في الهندسة المعمارية السحابية وتقنيات البيانات الضخمة مع خبرة واسعة في منصات AWS و Azure."
-    },
+  "en": "Senior Cloud Engineer with AWS certifications in Solutions Architect and Machine Learning Specialty. Accredited AWS re/Start Instructor with strong expertise as a Machine Learning Engineer and in MLOps practices. Experienced in designing and delivering scalable cloud and data-driven solutions.",
+  "ar": "مهندس سحابي أول حاصل على شهادات AWS في مهندس الحلول وتخصص التعلم الآلي. مدرب معتمد لبرنامج AWS re/Start مع خبرة قوية كمهندس تعلم آلي وفي ممارسات MLOps. يتمتع بخبرة في تصميم وتقديم حلول سحابية ومدفوعة بالبيانات قابلة للتوسع."
+},
     "linkedin": "https://linkedin.com/in/yahya-mohamed",
-    "image": "/pics/icon.png"
+    "image": "/pics/yahya.jpg"
   }
 ]

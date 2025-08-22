@@ -24,6 +24,17 @@ import {
   Settings,
   Clock,
   Building,
+  GraduationCap,
+  Briefcase,
+  UserPlus,
+  MessageCircle,
+  Instagram,
+  Send,
+  Facebook,
+  Linkedin,
+  Phone,
+  Copy,
+  ExternalLink,
 } from "lucide-react"
 
 interface Course {
@@ -36,6 +47,7 @@ interface Course {
   active: boolean
   registrationLink: string
   icon: string
+  image?: string
 }
 
 interface TeamMember {
@@ -44,6 +56,53 @@ interface TeamMember {
   bio: { en: string; ar: string }
   linkedin: string
   image: string
+}
+
+interface Partner {
+  id: number
+  title: { en: string; ar: string }
+  icon: string
+  embedUrl: string
+  active: boolean
+}
+
+interface Service {
+  id: string
+  title: { en: string; ar: string }
+  description: { en: string; ar: string }
+  icon: string
+  features: { en: string; ar: string }[]
+  duration: { en: string; ar: string }
+}
+
+interface SocialMedia {
+  id: string
+  name: string
+  username: string
+  url: string
+  icon: string
+  color: string
+  hoverColor: string
+}
+
+interface ContactSuggestion {
+  id: string
+  title: { en: string; ar: string }
+  description: { en: string; ar: string }
+  icon: string
+  color: string
+  iconColor: string
+  suggestion: { en: string; ar: string }
+}
+
+interface ContactData {
+  contactInfo: {
+    email: string
+    phone: string
+    website: string
+  }
+  socialMedia: SocialMedia[]
+  contactSuggestions: ContactSuggestion[]
 }
 
 // Icon mapping function
@@ -60,6 +119,20 @@ const getIcon = (iconName: string, className: string = "w-6 h-6") => {
     Award: <Award className={className} />,
     Building: <Building className={className} />,
     Globe: <Globe className={className} />,
+    Code: <Code className={className} />,
+    GraduationCap: <GraduationCap className={className} />,
+    Briefcase: <Briefcase className={className} />,
+    UserPlus: <UserPlus className={className} />,
+    Handshake: <Users className={className} />,
+    MessageCircle: <MessageCircle className={className} />,
+    Instagram: <Instagram className={className} />,
+    Send: <Send className={className} />,
+    Facebook: <Facebook className={className} />,
+    Linkedin: <Linkedin className={className} />,
+    Phone: <Phone className={className} />,
+    Mail: <Mail className={className} />,
+    Copy: <Copy className={className} />,
+    ExternalLink: <ExternalLink className={className} />,
   }
   return iconMap[iconName] || <BookOpen className={className} />
 }
@@ -69,9 +142,6 @@ const getIcon = (iconName: string, className: string = "w-6 h-6") => {
 export default function DataAcademyPage() {
   const [language, setLanguage] = useState<"en" | "ar">("en")
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
-  const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState("")
   
   // Data from JSON files
   const [translations, setTranslations] = useState<any>({})
@@ -80,7 +150,9 @@ export default function DataAcademyPage() {
   const [config, setConfig] = useState<any>({})
   const [archivedCourses, setArchivedCourses] = useState<any[]>([])
   const [impactData, setImpactData] = useState<any>({})
-  const [servicesData, setServicesData] = useState<any[]>([])
+  const [services, setServices] = useState<Service[]>([])
+  const [partners, setPartners] = useState<Partner[]>([])
+  const [contactData, setContactData] = useState<ContactData | null>(null)
   const [loading, setLoading] = useState(true)
 
   const t = translations[language] || {}
@@ -92,14 +164,16 @@ export default function DataAcademyPage() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [translationsRes, coursesRes, teamRes, configRes, archivedRes, impactRes, servicesRes] = await Promise.all([
+        const [translationsRes, coursesRes, teamRes, configRes, archivedRes, impactRes, servicesRes, partnersRes, contactRes] = await Promise.all([
           fetch('/data/translations.json'),
           fetch('/data/courses.json'),
           fetch('/data/team.json'),
           fetch('/data/config.json'),
           fetch('/data/archived-courses.json'),
           fetch('/data/impact.json'),
-          fetch('/data/services.json')
+          fetch('/data/services.json'),
+          fetch('/data/partners.json'),
+          fetch('/data/contact.json')
         ])
         
         const translationsData = await translationsRes.json()
@@ -109,6 +183,8 @@ export default function DataAcademyPage() {
         const archivedData = await archivedRes.json()
         const impactData = await impactRes.json()
         const servicesData = await servicesRes.json()
+        const partnersData = await partnersRes.json()
+        const contactData = await contactRes.json()
         
         setTranslations(translationsData)
         setCourses(coursesData)
@@ -116,7 +192,9 @@ export default function DataAcademyPage() {
         setConfig(configData)
         setArchivedCourses(archivedData)
         setImpactData(impactData)
-        setServicesData(servicesData)
+        setServices(servicesData)
+        setPartners(partnersData)
+        setContactData(contactData)
         setLoading(false)
       } catch (error) {
         console.error('Error loading data:', error)
@@ -128,27 +206,13 @@ export default function DataAcademyPage() {
   }, [])
 
 
-  const handleContactSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
+  // Helper function to copy text to clipboard
+  const copyToClipboard = async (text: string) => {
     try {
-      // Simulate email sending (replace with actual email service)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      // In a real implementation, you would send this to your email service
-      console.log("Contact form submitted:", {
-        ...contactForm,
-        to: config?.academy?.email || "info@iq-data.org",
-      })
-
-      setSubmitMessage(t.messageSent)
-      setContactForm({ name: "", email: "", message: "" })
-    } catch (error) {
-      setSubmitMessage(t.messageError)
-    } finally {
-      setIsSubmitting(false)
-      setTimeout(() => setSubmitMessage(""), 5000)
+      await navigator.clipboard.writeText(text)
+      return true
+    } catch (err) {
+      return false
     }
   }
 
@@ -183,8 +247,14 @@ export default function DataAcademyPage() {
             <a href="#home" className="text-white hover:text-blue-200 transition-colors">
               {t.home}
             </a>
+            <a href="#services" className="text-white hover:text-blue-200 transition-colors">
+              {t.services}
+            </a>
             <a href="#courses" className="text-white hover:text-blue-200 transition-colors">
               {t.courses}
+            </a>
+            <a href="#partners" className="text-white hover:text-blue-200 transition-colors">
+              {t.partners}
             </a>
             <a href="#about" className="text-white hover:text-blue-200 transition-colors">
               {t.about}
@@ -257,49 +327,43 @@ export default function DataAcademyPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-muted/30">
+      <section id="services" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">{t.servicesTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.servicesSubtitle}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="font-sans">{t.liveTraining}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground font-sans">{t.liveTrainingDesc}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-accent" />
-                </div>
-                <CardTitle className="font-sans">{t.mentoring}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground font-sans">{t.mentoringDesc}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-16 h-16 bg-chart-2/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Code className="w-8 h-8 text-chart-2" />
-                </div>
-                <CardTitle className="font-sans">{t.consultancy}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground font-sans">{t.consultancyDesc}</p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const bgColors = ['bg-primary/10', 'bg-accent/10', 'bg-chart-2/10', 'bg-chart-3/10']
+              const textColors = ['text-primary', 'text-accent', 'text-chart-2', 'text-chart-3']
+              return (
+                <Card key={service.id} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <CardHeader>
+                    <div className={`w-16 h-16 ${bgColors[index % bgColors.length]} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      {getIcon(service.icon, `w-8 h-8 ${textColors[index % textColors.length]}`)}
+                    </div>
+                    <CardTitle className="font-sans text-lg">{service.title[language]}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                      {service.description[language]}
+                    </p>
+                    <div className="space-y-2 mb-4">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="text-xs text-muted-foreground font-sans">
+                          • {feature[language]}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-xs font-medium text-primary font-sans">
+                      {service.duration[language]}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -312,19 +376,40 @@ export default function DataAcademyPage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.coursesSubtitle}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
             {courses
               .filter((course) => course.active)
               .map((course) => (
-                <Card key={course.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <Card key={course.id} className="w-full max-w-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                  {course.image && (
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={course.image}
+                        alt={course.title[language]}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          // Fallback to placeholder if image fails to load
+                          const target = e.target as HTMLImageElement
+                          target.src = `https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=${encodeURIComponent(course.title.en)}`
+                        }}
+                      />
+                      <div className="absolute top-3 right-3">
+                        <Badge variant="secondary" className="font-sans bg-white/90 text-gray-800">
+                          {course.level[language]}
+                        </Badge>
+                      </div>
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                         {getIcon(course.icon)}
                       </div>
-                      <Badge variant="secondary" className="font-sans">
-                        {course.level[language]}
-                      </Badge>
+                      {!course.image && (
+                        <Badge variant="secondary" className="font-sans">
+                          {course.level[language]}
+                        </Badge>
+                      )}
                     </div>
                     <CardTitle className="text-xl font-sans">{course.title[language]}</CardTitle>
                     <CardDescription className="text-sm leading-relaxed font-sans">
@@ -375,19 +460,46 @@ export default function DataAcademyPage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.archivedCoursesSubtitle}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 justify-items-center">
             {archivedCourses.slice(0, 3).map((course) => (
-              <Card key={course.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      {getIcon(course.icon)}
+              <Card key={course.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                {course.image && (
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={course.image}
+                      alt={course.title[language]}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        // Fallback to placeholder if image fails to load
+                        const target = e.target as HTMLImageElement
+                        target.src = `https://via.placeholder.com/400x240/10B981/FFFFFF?text=${encodeURIComponent(course.title.en)}`
+                      }}
+                    />
+                    <div className="absolute top-2 right-2">
+                      <Badge variant="secondary" className="font-sans bg-white/90 text-gray-800 text-xs">
+                        {course.level[language]}
+                      </Badge>
                     </div>
-                    <Badge variant="secondary" className="font-sans">
-                      {course.level[language]}
-                    </Badge>
+                    <div className="absolute bottom-2 left-2">
+                      <div className="flex items-center gap-1 bg-black/60 text-white px-2 py-1 rounded text-xs">
+                        <span className="text-yellow-400">★</span>
+                        <span>{course.rating}</span>
+                      </div>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl font-sans">{course.title[language]}</CardTitle>
+                )}
+                <CardHeader className={course.image ? "pb-4" : ""}>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      {getIcon(course.icon, "w-4 h-4")}
+                    </div>
+                    {!course.image && (
+                      <Badge variant="secondary" className="font-sans text-xs">
+                        {course.level[language]}
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-lg font-sans">{course.title[language]}</CardTitle>
                   <CardDescription className="text-sm leading-relaxed font-sans">
                     {course.description[language]}
                   </CardDescription>
@@ -460,36 +572,44 @@ export default function DataAcademyPage() {
         </div>
       </section>
 
-      {/* Impact Highlights Section */}
-      {impactData.highlights && impactData.highlights.length > 0 && (
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">
-                {language === "en" ? "Our Achievements" : "إنجازاتنا"}
-              </h2>
-            </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {impactData.highlights.map((highlight: any, index: number) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Award className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-sans">{highlight.title[language]}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed font-sans">
-                      {highlight.description[language]}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+      {/* Partners Section */}
+      <section id="partners" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">{t.partnersTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.partnersSubtitle}</p>
           </div>
-        </section>
-      )}
+
+          <div className="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
+            {partners
+              .filter((partner) => partner.active)
+              .map((partner) => (
+                <div
+                  key={partner.id}
+                  className="text-center cursor-pointer hover:scale-105 transition-all duration-300 group"
+                  onClick={() => window.open(partner.embedUrl, "_blank")}
+                >
+                  <div className="w-20 h-20 mx-auto mb-3 rounded-lg bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow duration-300 group-hover:bg-primary/5">
+                    <img
+                      src={partner.icon}
+                      alt={partner.title[language]}
+                      className="w-16 h-16 object-contain"
+                      onError={(e) => {
+                        // Fallback to a default icon if image fails to load
+                        const target = e.target as HTMLImageElement
+                        target.src = "https://img.icons8.com/color/96/000000/company.png"
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300 font-sans">
+                    {partner.title[language]}
+                  </h3>
+                </div>
+              ))}
+          </div>
+        </div>
+      </section>
 
       {/* About Section */}
       <section id="about" className="py-16">
@@ -540,69 +660,181 @@ export default function DataAcademyPage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.contactSubtitle}</p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardContent className="p-6">
-                <form onSubmit={handleContactSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      placeholder={t.name}
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      required
-                      className="font-sans"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder={t.email}
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      required
-                      className="font-sans"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder={t.message}
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                      rows={5}
-                      required
-                      className="font-sans"
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full font-sans bg-primary hover:bg-primary/90 text-white border-0 shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50" disabled={isSubmitting}>
-                    {isSubmitting ? (
-                      <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                        {t.sendMessage}
-                      </div>
-                    ) : (
-                      <>
-                        <Mail className="w-4 h-4 mr-2" />
-                        {t.sendMessage}
-                      </>
-                    )}
-                  </Button>
-
-                  {submitMessage && (
-                    <div
-                      className={`text-center p-3 rounded-lg font-sans ${
-                        submitMessage === t.messageSent
-                          ? "bg-chart-2/10 text-chart-2"
-                          : "bg-destructive/10 text-destructive"
-                      }`}
-                    >
-                      {submitMessage}
+          {contactData && (
+            <div className="max-w-6xl mx-auto space-y-12">
+              
+              {/* Contact Information Cards */}
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Email Card */}
+                <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+                      <Mail className="w-8 h-8 text-blue-600" />
                     </div>
-                  )}
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+                    <CardTitle className="font-sans text-lg">Email</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4 font-sans">Send us an email</p>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="font-medium text-foreground font-sans">{contactData.contactInfo.email}</span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => copyToClipboard(contactData.contactInfo.email)}
+                        className="h-8 w-8 p-0 hover:bg-blue-100"
+                      >
+                        <Copy className="w-4 h-4" />
+                      </Button>
+                    </div>
+                    <Button
+                      className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white"
+                      onClick={() => window.location.href = `mailto:${contactData.contactInfo.email}`}
+                    >
+                      <Mail className="w-4 h-4 mr-2" />
+                      Send Email
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Phone Card */}
+                <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-100 transition-colors">
+                      <Phone className="w-8 h-8 text-green-600" />
+                    </div>
+                    <CardTitle className="font-sans text-lg">Phone</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4 font-sans">Call us directly</p>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="font-medium text-foreground font-sans">{contactData.contactInfo.phone}</span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => copyToClipboard(contactData.contactInfo.phone)}
+                        className="h-8 w-8 p-0 hover:bg-green-100"
+                      >
+                        <Copy className="w-4 h-4" />
+                      </Button>
+                    </div>
+                    <Button
+                      className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white"
+                      onClick={() => window.location.href = `tel:${contactData.contactInfo.phone.replace(/\s/g, '')}`}
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Website Card */}
+                <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
+                      <Globe className="w-8 h-8 text-purple-600" />
+                    </div>
+                    <CardTitle className="font-sans text-lg">Website</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4 font-sans">Visit our website</p>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="font-medium text-foreground font-sans text-sm">{contactData.contactInfo.website}</span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => copyToClipboard(contactData.contactInfo.website)}
+                        className="h-8 w-8 p-0 hover:bg-purple-100"
+                      >
+                        <Copy className="w-4 h-4" />
+                      </Button>
+                    </div>
+                    <Button
+                      className="w-full mt-4 bg-purple-600 hover:bg-purple-700 text-white"
+                      onClick={() => window.open(contactData.contactInfo.website, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Visit Website
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Social Media Section */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-foreground mb-6 font-sans">Follow Us</h3>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {contactData.socialMedia.map((social) => (
+                    <Button
+                      key={social.id}
+                      className={`${social.color} ${social.hoverColor} text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-12 h-12 p-0 rounded-full`}
+                      onClick={() => window.open(social.url, '_blank')}
+                    >
+                      {getIcon(social.icon, "w-6 h-6")}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Suggestions */}
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-8 text-center font-sans">How Can We Help You?</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {contactData.contactSuggestions.map((suggestion) => (
+                    <Card key={suggestion.id} className={`${suggestion.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group`}>
+                      <CardHeader>
+                        <div className="flex items-center gap-4">
+                          <div className={`w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow`}>
+                            {getIcon(suggestion.icon, `w-6 h-6 ${suggestion.iconColor}`)}
+                          </div>
+                          <div>
+                            <CardTitle className="font-sans text-lg text-left">{suggestion.title[language]}</CardTitle>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground mb-3 font-sans leading-relaxed">
+                          {suggestion.description[language]}
+                        </p>
+                        <p className="text-sm font-medium text-foreground font-sans">
+                          💡 {suggestion.suggestion[language]}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* Call to Action */}
+              <div className="text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-sans">Ready to Get Started?</h3>
+                <p className="text-lg text-muted-foreground mb-6 font-sans max-w-2xl mx-auto">
+                  {language === 'en' 
+                    ? 'Choose your preferred contact method and reach out to us. We\'re here to help you succeed!'
+                    : 'اختر طريقة التواصل المفضلة لديك وتواصل معنا. نحن هنا لمساعدتك على النجاح!'
+                  }
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                    onClick={() => window.location.href = `mailto:${contactData.contactInfo.email}?subject=Inquiry from Data Academy Website`}
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    {language === 'en' ? 'Send Email' : 'إرسال بريد إلكتروني'}
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3"
+                    onClick={() => window.open(contactData.socialMedia[1]?.url, '_blank')} // Telegram
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    {language === 'en' ? 'Message on Telegram' : 'رسالة على تيليجرام'}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

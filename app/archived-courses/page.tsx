@@ -32,6 +32,7 @@ interface ArchivedCourse {
   instructor: string
   rating: number
   icon: string
+  image?: string
   outcomes: { en: string; ar: string }[]
 }
 
@@ -143,15 +144,42 @@ export default function ArchivedCoursesPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {archivedCourses.map((course) => (
-              <Card key={course.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card key={course.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                {course.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={course.image}
+                      alt={course.title[language]}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        // Fallback to placeholder if image fails to load
+                        const target = e.target as HTMLImageElement
+                        target.src = `https://via.placeholder.com/400x300/10B981/FFFFFF?text=${encodeURIComponent(course.title.en)}`
+                      }}
+                    />
+                    <div className="absolute top-3 right-3">
+                      <Badge variant="secondary" className="font-sans bg-white/90 text-gray-800">
+                        {course.level[language]}
+                      </Badge>
+                    </div>
+                    <div className="absolute bottom-3 left-3">
+                      <div className="flex items-center gap-1 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <span>{course.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                       {getIcon(course.icon)}
                     </div>
-                    <Badge variant="secondary" className="font-sans">
-                      {course.level[language]}
-                    </Badge>
+                    {!course.image && (
+                      <Badge variant="secondary" className="font-sans">
+                        {course.level[language]}
+                      </Badge>
+                    )}
                   </div>
                   <CardTitle className="text-xl font-sans">{course.title[language]}</CardTitle>
                   <CardDescription className="text-sm leading-relaxed font-sans">
