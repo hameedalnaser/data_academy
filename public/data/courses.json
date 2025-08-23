@@ -2,26 +2,26 @@
   {
     "id": 1,
     "title": {
-      "en": "coming soon",
-      "ar": "قريبا"
+      "en": "Data in Iraq Webinar",
+      "ar": "محاضرة عن البيانات في العراق"
     },
     "description": {
-      "en": "Fill the form and tell us which course do you need, and how you want us to deliver it",
-      "ar": "املأ النموذج وأخبرنا أي دورة تحتاج، وكيف تود أن نقدمها لك."
+      "en": "Tools, Methods, and Technologies, from Mini Business to Large Companies",
+      "ar": "الأدوات والأساليب والتقنيات من الشركات الصغيرة إلى الشركات الكبيرة"
     },
     "price": 0,
     "duration": {
-      "en": "Click on button below",
-      "ar": "اضغط على الزر ادناه"
+      "en": "1 Hour",
+      "ar": "ساعة واحدة"
     },
     "level": {
       "en": "All",
       "ar": "جميع المستويات"
     },
     "active": true,
-    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "registrationLink": "https://forms.gle/EmXaCRzZ5Y8UEs5o9",
     "icon": "BarChart3",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center"
+    "image": "/pics/dataiqen.png"
   },
   {
     "id": 2,
