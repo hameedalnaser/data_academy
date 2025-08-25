@@ -326,48 +326,6 @@ export default function DataAcademyPage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">{t.servicesTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.servicesSubtitle}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => {
-              const bgColors = ['bg-primary/10', 'bg-accent/10', 'bg-chart-2/10', 'bg-chart-3/10']
-              const textColors = ['text-primary', 'text-accent', 'text-chart-2', 'text-chart-3']
-              return (
-                <Card key={service.id} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader>
-                    <div className={`w-16 h-16 ${bgColors[index % bgColors.length]} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      {getIcon(service.icon, `w-8 h-8 ${textColors[index % textColors.length]}`)}
-                    </div>
-                    <CardTitle className="font-sans text-lg">{service.title[language]}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
-                      {service.description[language]}
-                    </p>
-                    <div className="space-y-2 mb-4">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="text-xs text-muted-foreground font-sans">
-                          • {feature[language]}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="text-xs font-medium text-primary font-sans">
-                      {service.duration[language]}
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Courses Section */}
       <section id="courses" className="py-16">
         <div className="container mx-auto px-4">
@@ -448,6 +406,48 @@ export default function DataAcademyPage() {
                   </CardContent>
                 </Card>
               ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">{t.servicesTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">{t.servicesSubtitle}</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const bgColors = ['bg-primary/10', 'bg-accent/10', 'bg-chart-2/10', 'bg-chart-3/10']
+              const textColors = ['text-primary', 'text-accent', 'text-chart-2', 'text-chart-3']
+              return (
+                <Card key={service.id} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <CardHeader>
+                    <div className={`w-16 h-16 ${bgColors[index % bgColors.length]} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      {getIcon(service.icon, `w-8 h-8 ${textColors[index % textColors.length]}`)}
+                    </div>
+                    <CardTitle className="font-sans text-lg">{service.title[language]}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                      {service.description[language]}
+                    </p>
+                    <div className="space-y-2 mb-4">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="text-xs text-muted-foreground font-sans">
+                          • {feature[language]}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-xs font-medium text-primary font-sans">
+                      {service.duration[language]}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
