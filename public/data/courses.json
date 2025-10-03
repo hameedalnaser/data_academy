@@ -45,7 +45,7 @@
     "active": true,
     "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
     "icon": "TrendingUp",
-    "image": "/pics/power-bi.jpeg"
+    "image": "/pics/bi.png"
   },
   {
     "id": 3,
@@ -69,7 +69,7 @@
     "active": true,
     "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
     "icon": "FileSpreadsheet",
-    "image": "/pics/excel.jpg"
+    "image": "/pics/excelp.png"
   },
   {
     "id": 4,
