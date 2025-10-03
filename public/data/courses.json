@@ -2,98 +2,98 @@
   {
     "id": 1,
     "title": {
-      "en": "Data in Iraq Webinar",
-      "ar": "محاضرة عن البيانات في العراق"
+      "en": "SQL Basics for Data Analysis",
+      "ar": "أساسيات SQL لتحليل البيانات"
     },
     "description": {
-      "en": "Tools, Methods, and Technologies, from Mini Business to Large Companies",
-      "ar": "الأدوات والأساليب والتقنيات من الشركات الصغيرة إلى الشركات الكبيرة"
+      "en": "A 5-day beginner-friendly course on SQL Basics for Data Analysis, designed to teach the core concepts of working with databases and retrieving insights using queries. The course covers SQL fundamentals, filtering and sorting data, using aggregate functions, joining tables, and concludes with a practical project for analyzing real-world datasets.",
+      "ar": "دورة تدريبية لمدة ٥ أيام للمبتدئين حول أساسيات SQL لتحليل البيانات، تهدف إلى تعليم المفاهيم الأساسية للعمل مع قواعد البيانات واستخراج النتائج باستخدام الاستعلامات. تغطي الدورة أساسيات SQL، فرز وتصفية البيانات، استخدام الدوال التجميعية، الربط بين الجداول، وتنتهي بمشروع عملي لتحليل مجموعات بيانات واقعية."
     },
-    "price": 0,
+    "price": 50000,
     "duration": {
-      "en": "1 Hour",
-      "ar": "ساعة واحدة"
-    },
-    "level": {
-      "en": "All",
-      "ar": "جميع المستويات"
-    },
-    "active": true,
-    "registrationLink": "https://forms.gle/EmXaCRzZ5Y8UEs5o9",
-    "icon": "BarChart3",
-    "image": "/pics/dataiqen.png"
-  },
-  {
-    "id": 2,
-    "title": {
-      "en": "Data Analysis with Excel & Power BI",
-      "ar": "تحليل البيانات باستخدام Excel و Power BI"
-    },
-    "description": {
-      "en": "Master data analysis using Excel and Power BI for business insights",
-      "ar": "إتقان تحليل البيانات باستخدام Excel و Power BI للحصول على رؤى الأعمال"
-    },
-    "price": 350000,
-    "duration": {
-      "en": "6 weeks",
-      "ar": "6 أسابيع"
+      "en": "5 days (2 hours/day)",
+      "ar": "5 أيام (2 ساعة/يوم)"
     },
     "level": {
       "en": "Beginner",
       "ar": "مبتدئ"
     },
-    "active": false,
-    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "active": true,
+    "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
+    "icon": "Database",
+    "image": "/pics/sql.png"
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Power BI Essentials",
+      "ar": "أساسيات Power BI"
+    },
+    "description": {
+      "en": "A 5-day beginner-friendly course on Power BI Essentials, designed to teach the fundamentals of business intelligence and data visualization. The course covers connecting to data sources, transforming and cleaning data, creating data models, building interactive reports and dashboards, and concludes with a practical project to apply all learned skills.",
+      "ar": "دورة تدريبية لمدة ٥ أيام للمبتدئين حول أساسيات Power BI، تهدف إلى تعليم أساسيات ذكاء الأعمال وعرض البيانات. تغطي الدورة الاتصال بمصادر البيانات، تحويل وتنظيف البيانات، إنشاء نماذج البيانات، بناء تقارير ولوحات معلومات تفاعلية، وتنتهي بمشروع عملي لتطبيق جميع المهارات المكتسبة."
+    },
+    "price": 50000,
+    "duration": {
+      "en": "5 days (2 hours/day)",
+      "ar": "5 أيام (2 ساعة/يوم)"
+    },
+    "level": {
+      "en": "Beginner",
+      "ar": "مبتدئ"
+    },
+    "active": true,
+    "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
     "icon": "TrendingUp",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center"
+    "image": "/pics/power-bi.jpeg"
   },
   {
     "id": 3,
-    "title": {
-      "en": "Data Engineering with SQL & Python",
-      "ar": "هندسة البيانات باستخدام SQL و Python"
+     "title": {
+      "en": "Excel for Data Analysis",
+      "ar": "Excel لتحليل البيانات"
     },
     "description": {
-      "en": "Build data pipelines, ETL processes, and database management",
-      "ar": "بناء خطوط أنابيب البيانات وعمليات ETL وإدارة قواعد البيانات"
+      "en": "A 5-day beginner-friendly course designed to teach the fundamentals of Excel for data analysis. The course covers Excel basics, formulas and functions, tables and data organization, charts and visualizations, and ends with a practical project to apply all learned skills.",
+      "ar": "دورة تدريبية لمدة ٥ أيام للمبتدئين تهدف إلى تعليم أساسيات برنامج إكسل لتحليل البيانات. تغطي الدورة أساسيات إكسل، الصيغ والدوال، الجداول وتنظيم البيانات، المخططات والعروض المرئية، وتنتهي بمشروع عملي لتطبيق جميع المهارات المكتسبة."
     },
-    "price": 600000,
+    "price": 50000,
     "duration": {
-      "en": "10 weeks",
-      "ar": "10 أسابيع"
+      "en": "5 days (2 hours/day)",
+      "ar": "5 أيام (2 ساعة/يوم)"
     },
     "level": {
-      "en": "Intermediate",
-      "ar": "متوسط"
+      "en": "Beginner",
+      "ar": "مبتدئ"
     },
-    "active": false,
-    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
-    "icon": "Database",
-    "image": "https://images.unsplash.com/photo-1518186233392-c232efbf2373?w=400&h=300&fit=crop&crop=center"
+    "active": true,
+    "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
+    "icon": "FileSpreadsheet",
+    "image": "/pics/excel.jpg"
   },
   {
     "id": 4,
     "title": {
-      "en": "Cloud Engineering (AWS/Azure)",
-      "ar": "الهندسة السحابية (AWS/Azure)"
+      "en": "dbt for Analytics Engineering",
+      "ar": "dbt لهندسة التحليلات"
     },
     "description": {
-      "en": "Deploy and manage cloud infrastructure for data applications",
-      "ar": "نشر وإدارة البنية التحتية السحابية لتطبيقات البيانات"
+      "en": "A 5-day beginner-friendly course introducing dbt (Data Build Tool) for data transformation and analytics engineering. The course covers dbt basics, setting up projects, writing SQL models, testing and documentation, and concludes with building a complete data pipeline project.",
+      "ar": "دورة تدريبية لمدة ٥ أيام للمبتدئين تهدف إلى التعريف بأداة dbt (Data Build Tool) للتحويلات البيانية وهندسة التحليلات. تغطي الدورة أساسيات dbt، إعداد المشاريع، كتابة نماذج SQL، الاختبارات والتوثيق، وتنتهي ببناء مشروع متكامل لخط أنابيب البيانات."
     },
-    "price": 750000,
+    "price": 150000,
     "duration": {
-      "en": "12 weeks",
-      "ar": "12 أسبوع"
+      "en": "5 days (2 hours/day)",
+      "ar": "5 أيام (2 ساعة/يوم)"
     },
     "level": {
       "en": "Advanced",
       "ar": "متقدم"
     },
-    "active": false,
-    "registrationLink": "https://forms.gle/D3GNxmgYPnT8kmSi8",
+    "active": true,
+    "registrationLink": "https://forms.gle/EJu7mtcH3UxyWnJf7",
     "icon": "Cloud",
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center"
+    "image": "/pics/dbt.png"
   },
   {
     "id": 5,
